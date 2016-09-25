@@ -50,6 +50,13 @@ cmake_minimum_required (VERSION 2.8)
 # required for exports? cmake_minimum_required (VERSION 2.8.6)
 project (jansson C)
 
+###############
+# ASI default settings
+list(APPEND CMAKE_MODULE_PATH "$ENV{ASI}/cmake/Modules")
+include(asv_cmake_defaults)
+asv_cmake_defaults( )
+###############
+
 # Options
 option(JANSSON_BUILD_SHARED_LIBS "Build shared libraries." ON)
 option(USE_URANDOM "Use /dev/urandom to seed the hash function." ON)
